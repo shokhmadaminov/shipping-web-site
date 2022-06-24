@@ -304,6 +304,7 @@ body {
 .trucks-section {
     padding: 12rem 0 13rem;
     background-image: linear-gradient(to right, var(--linear-dark-color)36.5%, rgba(0,0,0,0)36.5% 63.5%, var(--linear-dark-color)63.5%);
+    margin-bottom: 12rem;
 }
 .trucks-section__container {
     display: flex;
@@ -384,6 +385,57 @@ body {
     background-position: center;
 }
 
+/* SERVICES SECTION */
+.services-section {
+    margin-bottom: 12rem;
+}
+.services-section__title {
+    margin-bottom: 6rem;
+    text-transform: uppercase;
+}
+.services-section__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1px;
+}
+.services-section__item {
+    padding: 3.5rem 4.2rem;
+    list-style: none;
+    background-color: var(--linear-dark-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.services-section__item:hover {
+    background-color: var(--gold-color);
+}
+.services-section__item:hover .airplane-wrapper {
+    background-color: var(--white-color);
+}
+.services-section__item:hover .airplane-wrapper svg path {
+    fill: var(--linear-dark-color);
+}
+.airplane-wrapper {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    margin-bottom: 2.3rem;
+}
+.airplane-wrapper svg path {
+    fill: var(--white-color);
+}
+.services-section__item-subtitle {
+    font-weight: 700;
+    font-size: 1.8rem;
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
 
 /* MEDIA QUERIES SITE RESPONSIVS */
 @media only screen and (max-width: 1200px) {
@@ -391,6 +443,9 @@ body {
         width: 70%;
         height: auto;
         margin-right: 0;
+    }
+    .services-section__grid {
+        grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     }
 }
 
@@ -453,6 +508,10 @@ body {
     .trucks-section__right-arrow:first-child {
         margin-left: 2rem;
     }
+
+    .services-section__grid {
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -474,6 +533,10 @@ body {
     .trucks-section__left-hr {
         margin-left: auto;
         margin-right: auto;
+    }
+
+    .services-section__grid {
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     }
 }
 
@@ -500,6 +563,10 @@ body {
     }
     .flow-navbar__add {
         transition: transform 0.5s ease;
+    }
+
+    .services-section__grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
 
